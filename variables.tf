@@ -24,7 +24,7 @@ variable "environment_name" {
   description = "Name of Elastic Beanstalk environment"
 }
 
-variable "version" {
+variable "version_label" {
   type = "string"
   description = "Name of version of Elastic Beanstalk application"
 }

@@ -46,10 +46,10 @@ module "eb_version_deploy" {
   application_name = "${aws_elastic_beanstalk_application.example_application.name}"
   environment_name = "${aws_elastic_beanstalk_environment.example_environment.name}"
 
-  version = "<version_name>"
+  version_label = "<version_name>"
 
   source_bucket = "${aws_s3_bucket.beanstalk_application_versions.name}"
-  source_object = "${aws_s3_bucket_object.beanstalk_application_version.name}"
+  source_key = "${aws_s3_bucket_object.beanstalk_application_version.name}"
 }
 
 ```
