@@ -1,18 +1,5 @@
 
-variable "access_key" {
-  type = "string"
-  description = "AWS access key"
-}
 
-variable "secret_key" {
-  type = "string"
-  description = "AWS secret access key"
-}
-
-variable "region" {
-  type = "string"
-  description = "AWS region"
-}
 
 variable "application_name" {
   type = "string"
@@ -37,4 +24,14 @@ variable "source_bucket" {
 variable "source_key" {
   type = "string"
   description = "Object that contain version of Elastic beanstalk application"
+}
+
+variable "file_path" {
+  type = "string"
+  description = "Path to uploaded file"
+}
+
+variable "region" {
+  type = "string"
+  description = "AWS region"
 }
