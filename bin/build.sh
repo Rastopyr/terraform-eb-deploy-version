@@ -18,6 +18,8 @@ aws s3api put-object --bucket $source_bucket --key $source_key --region $aws_reg
 aws elasticbeanstalk create-application-version --application-name $application_name --version-label $version --source-bundle S3Bucket=$source_bucket,S3Key=$source_key --region $aws_region
 aws elasticbeanstalk update-environment --environment-name $environment_name --version-label $version --region $aws_region
 
+sleep 50
+
 end=`date +%s`
 
-echo Deploy version ended with success! Time elapsed: $((end-start)) seconds
+echo "Deploy version ended with success! Time elapsed: $((end-start)) seconds"
